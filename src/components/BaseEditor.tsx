@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 
-import YASQE from "yasgui-yasqe";
+import CodeMirror from "codemirror";
 
-import 'yasgui-yasqe/dist/yasqe.min.css';
+import 'codemirror/lib/codemirror.css';
 
-class Editor extends Component {
+class BaseEditor extends Component {
 
   public container;
-  public yasqe;
+  public editor;
 
   render() {
     return (
@@ -20,10 +20,13 @@ class Editor extends Component {
   componentDidMount() {
     // instantiate editor
     this.container = document.querySelector("#editor-container");
-    this.yasqe = YASQE(this.container);
-
-    console.log(this.yasqe);
+    this.editor = CodeMirror(this.container, { 
+      value: "testing",
+      mode: "javascript",
+      lineNumbers: true,
+      theme: "eclipse"
+    });
   }
 }
 
-export default Editor;
+export default BaseEditor;

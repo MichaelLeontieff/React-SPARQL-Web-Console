@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import Editor from "./Editor";
+import BaseEditor from "./BaseEditor";
 
 class App extends Component {
   render() {
     return (
-        <Editor></Editor>
+        <BaseEditor></BaseEditor>
     );
   }
 }
