@@ -1,7 +1,25 @@
 .app__query-container {
-    padding: 10px;
+
 }
 
 .app_app-container {
+    
+}
+
+.app_app-header-container {
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: rgb(146, 146, 146);
+}
+
+.app_content-container {
     padding: 10px;
+}
+
+.app_app-header {
+    display: inline;
+}
+
+.app_app-sub-header {
+    display: inline;
 }

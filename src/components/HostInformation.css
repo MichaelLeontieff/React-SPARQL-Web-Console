@@ -1,4 +1,7 @@
 .host-information {
-    width: 300px;
-    color: red;
+    height: 60px;
+}
+
+.host-information .row {
+    height: 100%;
 }

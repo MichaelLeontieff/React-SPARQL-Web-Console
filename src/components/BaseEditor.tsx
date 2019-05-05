@@ -5,6 +5,8 @@ import CodeMirror from "codemirror";
 import 'codemirror/lib/codemirror.css';
 import 'codemirror/mode/sparql/sparql';
 
+import './BaseEditor.css';
+
 /**
  * TODO: 
  *  - Expanded tokenizer to accomodate .rql or whatever language keywords like "invoke" come from
@@ -41,8 +43,8 @@ class BaseEditor extends Component {
 
   render() {
     return (
-      <div className="Editor">
-        <div id="editor-container"></div>
+      <div id="editor-container" className="base_editor-container">
+        { /* Editor will be injected here */ }
       </div>
     );
   }
@@ -56,6 +58,7 @@ class BaseEditor extends Component {
       lineNumbers: true,
       matchBrackets: true
     } as any);
+    this.editor.setSize(null, 500);
   }
 }
 
